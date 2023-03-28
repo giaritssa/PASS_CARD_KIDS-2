@@ -1,0 +1,58 @@
+<%= form_with(model: aluno) do |form| %>
+  <% if aluno.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(aluno.errors.count, "error") %> prohibited this aluno from being saved:</h2>
+
+      <ul>
+        <% aluno.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+        <div class="navbar-bottom pace-done pace-done">
+         <div class="row justify-content-center">
+    
+            <div class="row ">
+                <div class="col-md-4">
+                  <div class="fieldlabels">
+                    <label>Nome Completo <abbr title="obrigatório">*</abbr></label>
+                    <%= form.text_field :nome, autocomplete: "nope" , maxlength: "50" ,class: 'form-control', placeholder: 'Ex: João Souza Cardoso', required: true%>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="fieldlabels">
+                    <label>Turno <abbr title="obrigatório">*</abbr></label>
+                    <%= form.text_field :turno, class: 'form-control' , id: 'cpf' , placeholder: 'selecione', required: true%>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="fieldlabels">
+                    <label>RESGISTRO ACADEMICO <abbr title="obrigatório">*</abbr></label>
+                    <%= form.text_field :ra, maxlength: "15" , class: 'form-control' , id:'rg',placeholder: 'Ex: 4001543', required: true%>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="fieldlabels">
+                    <label>SERIE <abbr title="obrigatório">*</abbr></label>
+                    <%= form.text_field :serie, class: 'form-control', required: true%>
+                  </div>
+                </div>
+              </div>
+              
+
+
+
+
+
+
+             <div class="form-actions float-right" >
+                <%= form.submit 'Enviar', class:"btn btn-primary", data: { confirm: "Tem certeza que deseja enviar suas informações agora?" } %>
+              </div>
+
+<% end %>
+ </div>
+              </div>

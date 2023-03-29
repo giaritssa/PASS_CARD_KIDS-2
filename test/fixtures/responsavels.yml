@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  aluno: one
+  nome: MyString
+  cpf: MyString
+  contato: MyString
+  status: 1
+
+two:
+  aluno: two
+  nome: MyString
+  cpf: MyString
+  contato: MyString
+  status: 1
